@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZingMP3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="main">
+        <div id="container">
+               <!--
+            =======================NAVBAR==========================
+        -->
+        <div id="navbar">
+            <div class="navbar-container">
+                <header>
+                    <span class="check">
+                        <span class="ball"></span>
+                    </span>
+                    <i class="fa-solid fa-bars"></i>
+                </header>
+                <div class="logo">
+                    <i class="navbar__logo fa-brands fa-forumbee"></i>
+                    <span class="navbar__primary-text">Bee</span><span>music</span>
+                </div>
+                <div class="navbar-context">
+                    <nav>
+                        <li class="navbar-content__icon">
+                            <a href="#"><i class="fa-solid fa-house-user"></i>Home</a>
+                        </li>
+                        <li class="navbar-content__icon">
+                                <a href="#"><i class="fa-solid fa-chart-bar"></i>Trend</a>
+                        </li>
+                        <li class="navbar-content__icon">
+                                <a href="#"><i class="fa-solid fa-compass"></i>Feed</a>
+                        </li>
+                    </nav>
+
+                    <nav>
+                        <p class="navbar-content__title">Discover</p>
+                            <ul>
+                                <li class="navbar-content__icon">
+                                    <a href=""><i class="fa-solid fa-newspaper"></i>New and Notable</a>
+                                </li>
+                                <li class="navbar-content__icon">
+                                        <a href=""><i class="fa-solid fa-calendar"></i>Realese Calendar</a>
+                                </li>
+                                <li class="navbar-content__icon">
+                                    <a href=""><i class="fa-solid fa-ticket"></i>Events</a>
+                                </li>
+                            </ul>
+                    </nav>
+
+                    <nav>
+                        <p class="navbar-content__title">Your Collection</p>
+                            <ul>
+                                <li class="navbar-content__icon">
+                                    <a href=""><i class="fa-solid fa-heart"></i>Favorite Songs</a>
+                                </li>
+                                <li class="navbar-content__icon">
+                                        <a href=""><i class="fa-solid fa-users"></i>Artist</a>
+                                </li>
+                                <li class="navbar-content__icon">
+                                        <a href=""><i class="fa-solid fa-star"></i>Albums</a>
+                                </li>
+                            </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="navbar-user">
+                <div class="navbar-user__container">
+                    <div class="user-avt">
+                        <img src="https://image.thanhnien.vn/1200x630/Uploaded/2022/drkxrvyxqx/2021_07_17/ngoctrinh_gejd.jpg" alt="">
+                    </div>
+                    <div class="user-name">Hùng BroKer</div>
+                    <a href=""><i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!--
+            ====================MAIN_CONTENT=====================
+        -->
+        <div id="main-content">
+            <header>
+                <nav class="main-content__header-nav">
+                    <!-- <i class="fa-solid fa-bars"></i> -->
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </nav>
+                <div class="main-content__search-form">
+                    <i class="fa-solid fa-magnifying-glass search-btn"></i>
+                    <input type="text" class="search-input" placeholder="Search for artist, songs...">
+                </div>
+                <!-- <i class="fa-solid fa-bars"></i> -->
+            </header>
+
+            <p class="main-content__des">What'hot<span><img src="burn.png" alt=""></span></p>
+            <div class="main-content__trend">
+                <div class="main-content__trend-title">Trending</div>
+                <div class="main-content__trend-more btn-hover">
+                    More
+                    <span><i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+            </div>
+            <div class="main-content__banner">
+                <p class="main-content__banner-artist">Artist</p>
+                <h4 class="main-content__banner-des">On Top Of The World</h4>
+                <div class="main-content__banner-btn">
+                    <button class="play-btn">PLAY</button>
+                    <button class="follow-btn">FOLLOW</button>
+                </div>
+                <span class="main-content__veiw">Monthly listeners
+                    <p>50.000</p>
+                </span>
+            </div>
+            <div class="my-playlist">
+                <div class="playlist-head">
+                    <h4>My Playlist</h4>
+                    <a class="btn-hover" href="">Show all</a>
+                </div>
+                <div class="playlist-list">
+                    <div class="playlist playlist__tilte">
+                        <p class="playlist__number">#</p>
+                        <p class="playlist__title">TITLE</p>
+                        <p class="playlist__artist">ARTIST</p>
+                        <p class="playlist__time">TIME</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="play-song">
+                <div class="play-control">
+                    <div class="play-control__act">
+                        <i class="fa-solid fa-heart" id='heart'"></i>
+                        <i class="fa-solid fa-music"></i>
+                        <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                    </div>
+                    <div class="play-control__main">
+                        <i class="fa-solid fa-arrow-rotate-right  play-repeat"></i>
+                        <i class="fa-solid fa-backward-fast play-backward main-icon"></i>
+                        <span class="play-inner">
+                            <!-- <i class="fa-solid fa-play"></i> -->
+                            <i class="fa-solid fa-circle play-icon main-icon main-icon--big"></i>
+                        </span>
+                        <i class="fa-solid fa-forward-fast play-forward main-icon"></i>
+                        <i class="fa-solid fa-shuffle  shuffle-song"></i>
+                    </div>
+                    <div class="play-control__volume">
+                        <i class="fa-solid fa-volume-low"></i>
+                        <input type="range" class="volume" name="" id="volume">
+                        <i class="fa-solid fa-volume-high"></i>
+                    </div>
+                </div>
+                <div class="play-seekbar">
+                    <div class="timer__left">0:00</div>
+                    <input type="range" name="range" id="range" class="range" />
+                    <audio src="" id="song"></audio>
+                    <div class="timer__right">3.00</div>
+                </div>
+            </div>
+        </div>
+
+        <!--
+            ====================SIDE-BAR=========================
+        -->
+        <div id="sidebar">
+            <div class="sidebar__shortcuts">
+                <p class="sidebar__shortcuts-title">Shortcuts
+                    <i class="fa-solid fa-signal-stream"></i>
+                </p>
+                <div class="sidebar__shortcuts-items">
+                    <span class="sidebar__shortcuts-item">Chill
+                        <img src="snow.png" alt="">
+                    </span>
+                    <span class="sidebar__shortcuts-item">Hot
+                        <img src="star.png" alt="">
+                    </span>
+                    <span class="sidebar__shortcuts-item">Piano instrumental
+                        <img src="piano.png" alt="">
+                    </span>
+                    <span class="sidebar__shortcuts-item">Jazz
+                        <img src="Jazz.png" alt="">
+                    </span>
+                    <span class="sidebar__shortcuts-item">Acoustic
+                        <img src="ghitar.png" alt="">
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar__favorite">
+                <p class="sidebar__favorite-title">Favorite Artists</p>
+                <!--    ARTIST 1    -->
+                <div class="sidebar__favorite-list">
+                    <div class="artist-info__avt">
+                        <img style="object-fit: cover;" src="https://nghesiviet.vn/storage/files/7/hongdiem/hong-diem.jpg" alt="">
+                    </div>
+                    <div class="artist-info">
+                        <h4 class="artist-info__name">Hồng Diễm</h4>
+                        <p class="artist-info__song">6 songs in library</p>
+                    </div>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div class="sidebar__favorite-list">
+                    <div class="artist-info__avt">
+                        <img style="object-fit: cover;"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThTw9aGFmttjnECKHpG-aKmEQKqZGi2m9TkA&usqp=CAU" alt="">
+                    </div>
+                    <div class="artist-info">
+                        <h4 class="artist-info__name">Quỳnh Kool</h4>
+                        <p class="artist-info__song">5 songs in library</p>
+                    </div>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+            </div>
+
+            <div class="sidebar__suggest-album">
+                <div class="suggest-album">
+                    <div class="suggest-album__img-container">
+                        <img src="https://kenh14cdn.com/thumb_w/660/203336854389633024/2021/10/29/2419974173669095450788329071567032625915563n-16354852943671981353359.jpg" alt="">
+                    </div>
+                    <div class="suggest-album__content">
+                        <div class="suggest-album__info">
+                            <h4>Anh muốn đưa em về không</h4>
+                            <p>Blacking Rose</p>
+                        </div>
+                        <i class="fa-solid fa-square-dollar"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
